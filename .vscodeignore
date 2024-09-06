@@ -1,0 +1,10 @@
+.github/**
+.vscode/**
+.vscode-test/**
+.gitignore
+bin/**
+scripts/**
+src/**
+tests/**
+generate.js
+vsc-extension-quickstart.md

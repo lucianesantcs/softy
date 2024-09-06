@@ -1,0 +1,45 @@
+{
+  "name": "theme-softy",
+  "displayName": "Softy Theme",
+  "description": "Dark Soft Theme inspired on Catppuccin theme",
+  "publisher": "lucianesantcs",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "lint": "node ./scripts/lint.js",
+    "package": "vsce package -o ./bin/softy.vsix",
+    "vscode:prepublish": "npm run build",
+    "vsce-publish": "vsce publish"
+  },
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "homepage": "https://github.com/lucianesantcs/softy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucianesantcs/softy.git"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Softy",
+        "uiTheme": "vs-dark",
+        "path": "./theme/softy.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.0.0",
+    "tinycolor2": "^1.6.0",
+    "vsce": "^2.15.0"
+},
+  "__metadata": {
+    "id": "",
+    "publisherDisplayName": "Softy",
+    "publisherId": ""
+  }
+}
