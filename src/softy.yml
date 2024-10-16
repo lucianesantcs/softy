@@ -5,37 +5,37 @@ semanticClass: theme.softy
 semanticHighlighting: true
 softy:
   base:
-    - &BG        '#282A36'
-    - &FG        '#F8F8F2'
+    - &BG        '#181926'
+    - &FG        '#cdd6f4' #COLOR7
     - &SELECTION '#44475A'
     - &COMMENT   '#6272A4'
-    - &CYAN      '#8BE9FD'
-    - &GREEN     '#50FA7B'
-    - &ORANGE    '#FFB86C'
-    - &PINK      '#FF79C6'
-    - &PURPLE    '#BD93F9'
+    - &CYAN      '#d2dbf9' #COLOR6
+    - &GREEN     '#B7BDF8' #COLOR2
+    - &ORANGE    '#B7BDF8'
+    - &PINK      '#9399b2' #COLOR5
+    - &PURPLE    '#d2dbf9' #COLOR4
     - &RED       '#FF5555'
-    - &YELLOW    '#F1FA8C'
+    - &YELLOW    '#a4b1ff' #COLOR3
   ansi:
     - &COLOR0        '#21222C'
     - &COLOR1        '#FF5555'
-    - &COLOR2        '#50FA7B'
-    - &COLOR3        '#F1FA8C'
-    - &COLOR4        '#BD93F9'
-    - &COLOR5        '#FF79C6'
-    - &COLOR6        '#8BE9FD'
-    - &COLOR7        '#F8F8F2'
+    - &COLOR2        '#B7BDF8' #50FA7B
+    - &COLOR3        '#a4b1ff' #F1FA8C
+    - &COLOR4        '#d2dbf9' #BD93F9
+    - &COLOR5        '#9399b2' #FF79C6
+    - &COLOR6        '#d2dbf9' #8BE9FD
+    - &COLOR7        '#cdd6f4' #F8F8F2
     - &COLOR8        '#6272A4'
     - &COLOR9        '#FF6E6E'
-    - &COLOR10       '#69FF94'
-    - &COLOR11       '#FFFFA5'
-    - &COLOR12       '#D6ACFF'
-    - &COLOR13       '#FF92DF'
-    - &COLOR14       '#A4FFFF'
+    - &COLOR10       '#B7BDF8' #69FF94
+    - &COLOR11       '#a4b1ff' #FFFFA5
+    - &COLOR12       '#d2dbf9' #D6ACFF
+    - &COLOR13       '#9399b2' #FF92DF
+    - &COLOR14       '#d2dbf9' #A4FFFF
     - &COLOR15       '#FFFFFF'
   brightOther:
     # Temporary (awaiting fix)
-    - &TEMP_QUOTES          '#E9F284'
+    - &TEMP_QUOTES          '#a4b1ff'
     - &TEMP_PROPERTY_QUOTES '#8BE9FE'
   other:
     - &LineHighlight '#44475A75'
@@ -43,10 +43,10 @@ softy:
     - &WHITE         '#FFFFFF'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
-    - &BGLighter     '#424450'
-    - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
-    - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
-    - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    - &BGLighter     '#9399b2'
+    - &BGLight       '#181926' # HSV (230   , 25.71, 27.45)
+    - &BGDark        '#161725' # HSV (234.55, 25   , 17.25)
+    - &BGDarker      '#161725' # HSV (234.55, 25   , 13   )
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -76,7 +76,7 @@ colors:
   contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
 
   # Base Colors
-  focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
+  focusBorder: *COMMENT                                               # Overall border color for focused elements. This color is only used if not overridden by a component
   foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
   selection.background: *PURPLE                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
@@ -162,15 +162,15 @@ colors:
 
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
-  editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
+  editorGroup.border:                                                 # Color to separate multiple editor groups from each other
   editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
   editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
   editorGroupHeader.tabsBorder:                                                 # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
   tab.activeBackground: *BG                                                     # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
-  tab.border: *BGDarker                                                         # Border to separate Tabs from each other
-  tab.activeBorderTop: !alpha [*PINK, 80]                                       # A border drawn to the top of the active tab
+  tab.border:                                                        # Border to separate Tabs from each other
+  tab.activeBorderTop: !alpha [*FG, 80]                                       # A border drawn to the top of the active tab
   tab.activeBorder:                                                             # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
@@ -220,7 +220,7 @@ colors:
   # person to person. Thus, setting these is probably better suited
   # for workbench.colorCustomizations in User Settings
   editorBracketMatch.background:                                                # Background color behind matching brackets
-  editorBracketMatch.border:                                                    # Color for matching brackets boxes
+  editorBracketMatch.border:                                                     # Color for matching brackets boxes
 
   editorBracketHighlight.foreground1: *FG                                       # Color of first pair of brackets
   editorBracketHighlight.foreground2: *PINK                                     # Color of second pair of brackets
@@ -230,7 +230,7 @@ colors:
   editorBracketHighlight.foreground6: *ORANGE                                   # Color of sixth pair of brackets
   editorBracketHighlight.unexpectedBracket.foreground: *RED                     # Color of bracket matching error
 
-  editorOverviewRuler.border: *BGDarker                                         # Color of the overview ruler border
+  editorOverviewRuler.border:                                        # Color of the overview ruler border
   editorOverviewRuler.findMatchForeground:
   editorOverviewRuler.rangeHighlightForeground:
   editorOverviewRuler.selectionHighlightForeground: *ORANGE
@@ -396,11 +396,11 @@ tokenColors:
   - scope:
     - emphasis
     settings:
-      fontStyle: italic
+      fontStyle: normal
   - scope:
     - strong
     settings:
-      fontStyle: bold
+      fontStyle: normal
   - scope:
     - header
     settings:
@@ -429,12 +429,12 @@ tokenColors:
     - invalid
     settings:
       foreground: *RED
-      fontStyle: underline italic
+      fontStyle: underline normal
   - scope:
     - invalid.deprecated
     settings:
       foreground: *FG
-      fontStyle: underline italic
+      fontStyle: underline normal
   - scope:
     - entity.name.filename
     settings:
@@ -453,26 +453,26 @@ tokenColors:
     settings:
       fontStyle: underline
 
-  - name: Bold markup
+  - name: normal markup
     scope:
-    - markup.bold
+    - markup.normal
     settings:
-      fontStyle: bold
+      fontStyle: normal
       foreground: *ORANGE
 
   - name: Markup headings
     scope:
     - markup.heading
     settings:
-      fontStyle: bold
+      fontStyle: normal
       foreground: *PURPLE
 
-  - name: Markup italic
+  - name: Markup normal
     scope:
-    - markup.italic
+    - markup.normal
     settings:
       foreground: *YELLOW
-      fontStyle: italic
+      fontStyle: normal
 
   - name: Bullets, lists (prose)
     scope:
@@ -511,7 +511,7 @@ tokenColors:
     - markup.quote
     settings:
       foreground: *YELLOW
-      fontStyle: italic
+      fontStyle: normal
 
   - name: Horizontal rule (prose)
     scope:
@@ -576,13 +576,13 @@ tokenColors:
     - variable.parameter.function.language.special          # Special words as parameters
     settings:
       foreground: *PURPLE
-      fontStyle: italic
+      fontStyle: normal
 
   - name: Inherited classes
     scope:
     - entity.other.inherited-class
     settings:
-      fontStyle: italic
+      fontStyle: normal
       foreground: *CYAN
 
 # =============================================================================
@@ -611,7 +611,7 @@ tokenColors:
     - comment.block.documentation entity.name.type
     settings:
       foreground: *CYAN
-      fontStyle: italic
+      fontStyle: normal
 
   - name: JSDoc-style type brackets
     scope:
@@ -624,7 +624,7 @@ tokenColors:
     - comment.block.documentation variable
     settings:
       foreground: *ORANGE
-      fontStyle: italic
+      fontStyle: normal
 
 # =============================================================================
 # Constants
@@ -666,7 +666,7 @@ tokenColors:
     - entity.other.attribute-name
     settings:
       foreground: *GREEN
-      fontStyle: italic
+      fontStyle: normal
 
 # =============================================================================
 # Functions/Methods
@@ -694,7 +694,7 @@ tokenColors:
     - meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql
     - variable.parameter
     settings:
-      fontStyle: italic
+      fontStyle: normal
       foreground: *ORANGE
 
   - name: Decorators
@@ -703,7 +703,7 @@ tokenColors:
     - meta.decorator variable.other.property
     settings:
       foreground: *GREEN
-      fontStyle: italic
+      fontStyle: normal
 
   - name: Decorator Objects
     scope:
@@ -727,7 +727,7 @@ tokenColors:
     - keyword.control.new
     - keyword.operator.new
     settings:
-      fontStyle: bold
+      fontStyle: normal
 
   - name: Generic selectors (CSS/SCSS/Less/Stylus)
     scope:
@@ -743,7 +743,7 @@ tokenColors:
     scope:
     - support
     settings:
-      fontStyle: italic
+      fontStyle: normal
       foreground: *CYAN
 
   - name: Built-in magic functions and constants
@@ -857,7 +857,7 @@ tokenColors:
     scope:
     - variable.other.alias.yaml
     settings:
-      fontStyle: italic underline
+      fontStyle: normal underline
       foreground: *GREEN
 
 # =============================================================================
@@ -896,7 +896,7 @@ tokenColors:
     - storage.type.haskell
     - storage.type.ocaml
     settings:
-      fontStyle: italic
+      fontStyle: normal
       foreground: *CYAN
 
   - name: Generics, templates, and mapped type declarations
@@ -1021,7 +1021,7 @@ tokenColors:
     - meta.import variable.other.readwrite                          # Module import aliasing (real name)
     - meta.variable.assignment.destructured.object.coffee variable  # Object destructuring property (coffeescript)
     settings:
-      fontStyle: italic
+      fontStyle: normal
       foreground: *ORANGE
 
   - name: Destructuring / aliasing variable name (RHS)
@@ -1123,11 +1123,11 @@ tokenColors:
       - log.error
     settings:
       foreground: *RED
-      fontStyle: bold
+      fontStyle: normal
 
   - name: Log file warning
     scope:
       - log.warning
     settings:
       foreground: *YELLOW
-      fontStyle: bold
+      fontStyle: normal
